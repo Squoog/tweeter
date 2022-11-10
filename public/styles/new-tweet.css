@@ -1,0 +1,28 @@
+.tweet-button {
+  background-color: orange;
+  font-family: 'Bungee', sans-serif;
+  font-size: 20px;
+  color:white;
+  padding: 5px;
+  margin-top: 15px;
+}
+
+.new-tweet-form {
+  position: relative;
+  width: 420px;
+}
+
+.counter {
+  font-family: 'Bungee', sans-serif;
+  margin-top: 10px;
+}
+
+#tweet-text {
+  background-color: transparent;
+  border: 0px solid;
+  border-bottom: solid;
+  height: 60px;
+  width: 400px;
+  resize: none;
+  padding-top: 10px;
+}
