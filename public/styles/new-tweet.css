@@ -26,3 +26,12 @@
   resize: none;
   padding-top: 10px;
 }
+
+.counter {
+  display: flex;
+  align-items: center;
+}
+
+#tweet-button:hover {
+  background-color: red;
+}
