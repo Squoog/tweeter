@@ -8,8 +8,8 @@
 }
 
 .new-tweet-form {
-  position: relative;
-  width: 420px;
+  display: flex;
+  flex-direction: column;
 }
 
 .counter {
@@ -21,8 +21,6 @@
   background-color: transparent;
   border: 0px solid;
   border-bottom: solid;
-  height: 60px;
-  width: 400px;
   resize: none;
   padding-top: 10px;
 }
@@ -34,4 +32,28 @@
 
 #tweet-button:hover {
   background-color: red;
+}
+
+.errorExceedMaximum {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: maroon;
+  border: 2px solid maroon;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.errorNoTweet {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: maroon;
+  border: 2px solid maroon;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.errorMessage {
+  margin: 10px 10px 10px 10px;
 }

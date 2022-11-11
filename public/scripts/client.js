@@ -65,13 +65,18 @@ $(document).ready(function () {
 
 
     let inputLength = $(this).find("#tweet-text").val().length;
-    console.log("Hello!!!!!", inputLength);
     if (!inputLength) {
-      alert("Error: Your Tweet must be at least one character long!");
+      $(".errorExceedMaximum").hide();
+      $(".errorNoTweet").slideDown("slow", function() { 
+        $(this).css('display', 'flex');
+      });
     }
     else if (inputLength > 140) {
       console.log(inputLength);
-      alert("Error: Your Tweet cannot exceed 140 characters!");
+      $(".errorNoTweet").hide();
+      $(".errorExceedMaximum").slideDown("slow", function() { 
+        $(this).css('display', 'flex');
+      });
 
     }
     else {

@@ -49,6 +49,18 @@
 
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+
+        <!--Error messages whitout needing Alert windows  -->
+        <div class="errorExceedMaximum">
+          <i class="fa-solid fa-trianlge-exclamation"></i>
+          <span class="errorMessage">Your post has exceeded the 140 character limit!</span>
+        </div>
+
+        <div class="errorNoTweet">
+          <i class="fa-solid fa-trianlge-exclamation"></i>
+          <span class="errorMessage">Your post cannot be empty!</span>
+        </div>
+        
         <form class ="new-tweet-form" id="tweet-form">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
