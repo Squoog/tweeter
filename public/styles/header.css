@@ -3,7 +3,7 @@ The avatar should be centered vertically and horizontally (Hint: the justify-con
 The name should be centered below the avatar
 The background-color should be a different colour than the nav and the body */
 
-header {
+.user-header {
   width: 100%;
   text-align: center;
   text-justify: end;
@@ -11,4 +11,8 @@ header {
   opacity: 100%;
   padding-top: 120px;
 
+}
+
+.name-of-user {
+  margin-top: -55px;
 }

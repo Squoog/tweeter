@@ -6,6 +6,10 @@
 
 $(document).ready(function () {
   const renderTweets = function(tweets) {
+
+    // Empties elements of tweets container so that Tweets are added only once
+    $(".tweets-container").empty();
+
     // loops through tweets
     for (let tweet of tweets) {
       // calls createTweetElement for each tweet
@@ -40,7 +44,7 @@ $(document).ready(function () {
 
   const loadTweets = () => {
     $.get("/tweets", (tweets) => {
-      renderTweets(tweets);
+      renderTweets(tweets.reverse());
     })
   }
 
@@ -63,7 +67,11 @@ $(document).ready(function () {
     }
     else {
       let newTweet = $(this).serialize();
-      $.post("/tweets", newTweet);
+      $.post("/tweets", newTweet, (resolve) => {
+        $(this).get(0).reset();
+        $(this).find(".counter").val(140);
+        loadTweets();
+      });
     }
 
   })
