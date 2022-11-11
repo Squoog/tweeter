@@ -5,6 +5,15 @@
  */
 
 $(document).ready(function () {
+
+  // Encoding user's input to deal with cross-site scripting
+  const escape = function(input) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(input));
+    return div.innerHTML;
+  }
+
+  // Adds Tweet inputs to the existing collection of Tweets in the container
   const renderTweets = function(tweets) {
 
     // Empties elements of tweets container so that Tweets are added only once
@@ -28,7 +37,7 @@ $(document).ready(function () {
         </div>
         <span class="tweet-header-handle">${tweet.user.handle}</span>
       </header>
-      <p class="tweet-content">${tweet.content.text}</p>
+      <p class="tweet-content">${escape(tweet.content.text)}</p>
       <footer class="tweet-footer">
         <p class="tweet-footer-date">${timeago.format(tweet.created_at)}</p>
         <div class="tweet-footer-icons">
