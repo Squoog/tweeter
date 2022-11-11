@@ -49,8 +49,23 @@ $(document).ready(function () {
   $("#tweet-form").submit(function(event) {
     event.preventDefault();
 
-    let newTweet = $(this).serialize();
-    $.post("/tweets", newTweet);
+
+
+    let inputLength = $(this).find("#tweet-text").val().length;
+    console.log("Hello!!!!!", inputLength);
+    if (!inputLength) {
+      alert("Error: Your Tweet must be at least one character long!");
+    }
+    else if (inputLength > 140) {
+      console.log(inputLength);
+      alert("Error: Your Tweet cannot exceed 140 characters!");
+
+    }
+    else {
+      let newTweet = $(this).serialize();
+      $.post("/tweets", newTweet);
+    }
+
   })
 })
 
