@@ -37,17 +37,17 @@
 }
 
 .tweet-footer-icons > .fa-flag:hover {
-  color: goldenrod;
+  color: navy;
   cursor: pointer;
 }
 
 .tweet-footer-icons > .fa-retweet:hover {
-  color: goldenrod;
+  color: navy;
   cursor: pointer;
 }
 
 .tweet-footer-icons > .fa-heart:hover {
-  color: goldenrod;
+  color: Navy;
   cursor: pointer;
 }
 
