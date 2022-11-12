@@ -5,24 +5,17 @@
   color:white;
   padding: 5px;
   margin-top: 15px;
-  margin-bottom: 10px;
-  border-radius: 20px;
 }
 
 .new-tweet-form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
-  border-radius: 20px;
-}
-
-.new-tweet:hover {
-  box-shadow: 5px 5px #888888;
 }
 
 .counter {
   font-family: 'Bungee', sans-serif;
   margin-top: 10px;
+  justify-content: right;
 }
 
 #tweet-text {

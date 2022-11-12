@@ -9,12 +9,16 @@ The background-color should be a different colour than the nav and the body */
   text-justify: end;
   background-image: url(http://www.transparenttextures.com/patterns/cardboard.png);
   opacity: 100%;
-  padding-top: 120px;
+  padding-top: 140px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
 }
 
 .name-of-user {
-  margin-top: -55px;
+  margin-top: -10px;
 }
 
 @media only screen and (min-width: 1024px) {
