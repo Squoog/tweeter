@@ -16,3 +16,10 @@ The background-color should be a different colour than the nav and the body */
 .name-of-user {
   margin-top: -55px;
 }
+
+@media only screen and (min-width: 1024px) {
+  .user-header {
+    margin: 100px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+  }
+}
