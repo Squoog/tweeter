@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
   $("#tweet-text").on("input", function(){
-    console.log("Egg");
 
     let inputTweetLength = $(this).val().length;
     let count = 140 - inputTweetLength;

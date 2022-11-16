@@ -4,12 +4,13 @@
   font-size: 20px;
   color:white;
   padding: 5px;
-  margin-top: 15px;
+  margin-bottom: 60;
 }
 
 .new-tweet-form {
   display: flex;
   flex-direction: column;
+  margin-bottom: 65px;
 }
 
 .counter {
@@ -32,7 +33,7 @@
 }
 
 #tweet-button:hover {
-  background-color: red;
+  background-color: blue;
 }
 
 .errorExceedMaximum {

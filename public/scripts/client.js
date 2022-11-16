@@ -72,7 +72,6 @@ $(document).ready(function () {
       });
     }
     else if (inputLength > 140) {
-      console.log(inputLength);
       $(".errorNoTweet").hide();
       $(".errorExceedMaximum").slideDown("slow", function() { 
         $(this).css('display', 'flex');
