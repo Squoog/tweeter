@@ -28,6 +28,7 @@ $(document).ready(function () {
     }
   };
   
+  // Generates a tweet using random avatar, handle and name elements
   const createTweetElement = function(tweet) {
     return $(`<article class="tweet">
       <header class="tweet-header">
@@ -47,10 +48,9 @@ $(document).ready(function () {
         </div>
       </footer>
     </article>`);
-
-    return $tweet;
   }
 
+  // Tweets are displayed in a reverse-chronological order
   const loadTweets = () => {
     $.get("/tweets", (tweets) => {
       renderTweets(tweets.reverse());
@@ -62,8 +62,7 @@ $(document).ready(function () {
   $("#tweet-form").submit(function(event) {
     event.preventDefault();
 
-
-
+    // When to display errors if tweets are empty or if too long
     let inputLength = $(this).find("#tweet-text").val().length;
     if (!inputLength) {
       $(".errorExceedMaximum").hide();
@@ -76,9 +75,10 @@ $(document).ready(function () {
       $(".errorExceedMaximum").slideDown("slow", function() { 
         $(this).css('display', 'flex');
       });
-
     }
     else {
+      $(".errorNoTweet").hide();
+      $(".errorExceedMaximum").hide();
       let newTweet = $(this).serialize();
       $.post("/tweets", newTweet, (resolve) => {
         $(this).get(0).reset();
