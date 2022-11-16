@@ -50,7 +50,7 @@ $(document).ready(function () {
     </article>`);
   }
 
-  // Tweets are displayed in a reverse-chronological order
+  // Tweets are loaded in a reverse-chronological order
   const loadTweets = () => {
     $.get("/tweets", (tweets) => {
       renderTweets(tweets.reverse());
@@ -64,12 +64,14 @@ $(document).ready(function () {
 
     // When to display errors if tweets are empty or if too long
     let inputLength = $(this).find("#tweet-text").val().length;
+    // Displays when user tries to post an empty tweet
     if (!inputLength) {
       $(".errorExceedMaximum").hide();
       $(".errorNoTweet").slideDown("slow", function() { 
         $(this).css('display', 'flex');
       });
     }
+    // Displays when user tries to post a tweet over the character limit
     else if (inputLength > 140) {
       $(".errorNoTweet").hide();
       $(".errorExceedMaximum").slideDown("slow", function() { 
@@ -77,6 +79,7 @@ $(document).ready(function () {
       });
     }
     else {
+      // Hides errors that are no longer relevant
       $(".errorNoTweet").hide();
       $(".errorExceedMaximum").hide();
       let newTweet = $(this).serialize();

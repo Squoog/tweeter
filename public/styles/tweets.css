@@ -1,10 +1,11 @@
 .tweets-container {
-  background-color: #E9E9E9;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .tweet {
+  background-color: #DADADA;
+  color: #000000;
   margin-top: 30px;
   margin-bottom: 30px;
   border-radius: 20px;
